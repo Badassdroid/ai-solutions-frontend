@@ -7,9 +7,15 @@ function VerifyToken() {
 
   const handleVerify = async () => {
     try {
-      const res = await axios.post('https://ai-solutions-backend.onrender.com/verify-token', {
-        token,
-      });
+      const res = await axios.post(
+        'https://ai-solutions-backend.onrender.com/verify-token',
+        {}, // No body needed
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // 👈 Send token in header
+          },
+        }
+      );
 
       setResult(res.data);
     } catch (err) {

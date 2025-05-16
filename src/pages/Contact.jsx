@@ -29,7 +29,7 @@ const ContactPage = () => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/inquiries', formData, {
+      await axios.post('https://ai-solutions-backend.onrender.com/api/inquiries', formData, {
         headers: {
           'Content-Type': 'application/json',
         },

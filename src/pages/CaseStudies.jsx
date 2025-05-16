@@ -128,7 +128,7 @@ const CaseStudies = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5000/api/reviews')
+        const response = await axios.get('https://ai-solutions-backend.onrender.com/api/reviews')
         setReviews(response.data || [])
       } catch (error) {
         console.error('Failed to fetch reviews:', error)

@@ -6,7 +6,7 @@ function VerifyToken({ token }) {
 
   const handleVerify = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/verify-token', { token });
+      const res = await axios.post('https://ai-solutions-backend.onrender.com/verify-token', { token });
       setResult(res.data);
     } catch (err) {
       setResult({ error: err.response?.data?.message || 'Invalid token' });

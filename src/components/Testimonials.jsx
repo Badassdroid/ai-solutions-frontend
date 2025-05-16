@@ -11,7 +11,7 @@ const Testimonials = () => {
     const fetchReviews = async () => {
       setIsLoading(true)
       try {
-        const response = await axios.get('http://127.0.0.1:5000/api/reviews')
+        const response = await axios.get('https://ai-solutions-backend.onrender.com/api/reviews')
         // Ensure we're working with an array of reviews
         if (response.data && Array.isArray(response.data)) {
           setReviews(response.data)

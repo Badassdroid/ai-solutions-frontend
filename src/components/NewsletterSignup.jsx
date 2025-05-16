@@ -10,7 +10,7 @@ const NewsletterSignup = () => {
     e.preventDefault()
 
     try {
-      const response = await fetch('http://localhost:5000/api/newsletters', {
+      const response = await fetch('https://ai-solutions-backend.onrender.com/api/newsletters', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

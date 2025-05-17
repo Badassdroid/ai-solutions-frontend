@@ -148,7 +148,7 @@ const CaseStudies = () => {
     }
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/reviews', newReview)
+      const response = await axios.post('https://ai-solutions-backend.onrender.com/api/reviews', newReview)
       setMessage(response.data.message || 'Review submitted successfully')
       setReviews((prev) => [newReview, ...prev])
       setNewReview({ name: '', company: '', review: '', rating: 0 })

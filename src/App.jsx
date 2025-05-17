@@ -4,6 +4,7 @@ import Navbar from './components/NavBar';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 import ErrorBoundary from './components/ErrorBoundary';
+import { Analytics } from "@vercel/analytics/next"
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));
